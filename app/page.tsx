@@ -97,7 +97,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section faq-section" aria-labelledby="faq-heading">
+      <section id="faq" className="section faq-section" aria-labelledby="faq-heading">
         <div className="section-heading">FAQ</div>
         <h2 id="faq-heading" className="section-title">
           Frequently asked questions.
