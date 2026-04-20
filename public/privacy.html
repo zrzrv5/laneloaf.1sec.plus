@@ -1,125 +1,149 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LaneLoaf Privacy</title>
-    <meta
-      name="description"
-      content="LaneLoaf privacy policy. Local-first processing, optional private iCloud sync."
-    />
-    <style>
-      :root {
-        color-scheme: dark;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100%;
-      }
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-        color: #dee5ff;
-        background:
-          radial-gradient(circle at top, rgba(139, 92, 246, 0.35), transparent 45%),
-          radial-gradient(circle at bottom, rgba(6, 182, 212, 0.28), transparent 55%),
-          linear-gradient(180deg, #060e20 0%, #020617 100%);
-      }
-      .shell {
-        max-width: 840px;
-        margin: 0 auto;
-        padding: 32px 20px 64px;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 24px;
-      }
-      .title {
-        font-size: 30px;
-        line-height: 1.1;
-        letter-spacing: -0.04em;
-        margin: 0;
-      }
-      .muted {
-        color: #a3aac4;
-      }
-      .panel {
-        margin-top: 16px;
-        border-radius: 18px;
-        border: 1px solid rgba(148, 163, 184, 0.35);
-        background:
-          linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9)),
-          radial-gradient(circle at 0 0, rgba(99, 221, 255, 0.28), transparent 55%);
-        box-shadow:
-          0 24px 56px rgba(15, 23, 42, 0.9),
-          inset 0 0 0 1px rgba(15, 23, 42, 0.8);
-        padding: 18px 18px 6px;
-      }
-      h2 {
-        margin-top: 0;
-        margin-bottom: 8px;
-        font-size: 18px;
-      }
-      p {
-        margin-top: 0;
-        margin-bottom: 14px;
-        line-height: 1.58;
-      }
-      a {
-        color: #65e1ff;
-      }
-      .updated {
-        margin-top: 20px;
-        font-size: 13px;
-        color: #64748b;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="shell">
-      <div class="header">
-        <h1 class="title">LaneLoaf Privacy</h1>
-        <a href="/">Back to Home</a>
-      </div>
-      <p class="muted">
-        LaneLoaf is built to keep your trip data on your device by default. We keep this simple.
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LaneLoaf Privacy</title>
+  <meta name="description" content="LaneLoaf privacy policy. Local-first processing, optional private iCloud sync." />
+  <link rel="canonical" href="https://laneloaf.1sec.plus/privacy.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LaneLoaf" />
+  <meta property="og:title" content="LaneLoaf Privacy" />
+  <meta property="og:description" content="LaneLoaf privacy policy. Local-first processing, optional private iCloud sync." />
+  <meta property="og:url" content="https://laneloaf.1sec.plus/privacy.html" />
+  <meta property="og:image" content="https://laneloaf.1sec.plus/icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LaneLoaf Privacy" />
+  <meta name="twitter:description" content="LaneLoaf privacy policy. Local-first processing, optional private iCloud sync." />
+  <meta name="twitter:image" content="https://laneloaf.1sec.plus/icon.png" />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      color: #dee5ff;
+      background:
+        radial-gradient(circle at top, rgba(139, 92, 246, 0.35), transparent 45%),
+        radial-gradient(circle at bottom, rgba(6, 182, 212, 0.28), transparent 55%),
+        linear-gradient(180deg, #060e20 0%, #020617 100%);
+    }
+
+    .shell {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      font-size: 30px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0;
+    }
+
+    .muted {
+      color: #a3aac4;
+    }
+
+    .panel {
+      margin-top: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9)),
+        radial-gradient(circle at 0 0, rgba(99, 221, 255, 0.28), transparent 55%);
+      box-shadow:
+        0 24px 56px rgba(15, 23, 42, 0.9),
+        inset 0 0 0 1px rgba(15, 23, 42, 0.8);
+      padding: 18px 18px 6px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 14px;
+      line-height: 1.58;
+    }
+
+    a {
+      color: #65e1ff;
+    }
+
+    .updated {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="shell">
+    <div class="header">
+      <h1 class="title">LaneLoaf Privacy</h1>
+      <a href="/">Back to Home</a>
+    </div>
+    <p class="muted">
+      LaneLoaf is built to keep your trip data on your device by default. We keep this simple.
+    </p>
+
+    <section class="panel">
+      <h2>What LaneLoaf does</h2>
+      <p>
+        LaneLoaf imports dashcam footage and route files, extracts trip information, and shows
+        your trips in the app. This processing is local-first.
       </p>
 
-      <section class="panel">
-        <h2>What LaneLoaf does</h2>
-        <p>
-          LaneLoaf imports dashcam footage and route files, extracts trip information, and shows
-          your trips in the app. This processing is local-first.
-        </p>
+      <h2>What LaneLoaf does not do</h2>
+      <p>
+        LaneLoaf does not ask for your device location to run the core app. LaneLoaf does not
+        run ad tracking. LaneLoaf does not sell your personal data.
+      </p>
 
-        <h2>What LaneLoaf does not do</h2>
-        <p>
-          LaneLoaf does not ask for your device location to run the core app. LaneLoaf does not
-          run ad tracking. LaneLoaf does not sell your personal data.
-        </p>
+      <h2>Optional iCloud sync</h2>
+      <p>
+        If you turn on iCloud sync, LaneLoaf can mirror your trip-library data and generated
+        previews through your private Apple CloudKit account so your library can stay in sync
+        across your own devices.
+      </p>
 
-        <h2>Optional iCloud sync</h2>
-        <p>
-          If you turn on iCloud sync, LaneLoaf can mirror your trip-library data and generated
-          previews through your private Apple CloudKit account so your library can stay in sync
-          across your own devices.
-        </p>
+      <h2>Contact</h2>
+      <p>
+        Questions or privacy requests: <a
+          href="mailto:support@1sec.plus?subject=%5BLaneLoaf%5D%20Question%20about%3A%20...&amp;body=Hi%20LaneLoaf%20Team%2C%0D%0A%0D%0AI%20would%20like%20to%20ask%20about%20%2F%20request%20help%20with%3A%0D%0A%0D%0A%5BType%20your%20message%20here%5D%0D%0A%0D%0AThanks%2C%0D%0A">support@1sec.plus</a>
+      </p>
+    </section>
 
-        <h2>Contact</h2>
-        <p>
-          Questions or privacy requests: <a href="mailto:support@laneloaf.com">support@laneloaf.com</a>
-        </p>
-      </section>
+    <p class="updated">Last updated: March 31, 2026</p>
+  </main>
+</body>
 
-      <p class="updated">Last updated: March 31, 2026</p>
-    </main>
-  </body>
 </html>
-

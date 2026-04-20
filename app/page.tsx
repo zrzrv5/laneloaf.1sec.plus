@@ -1,8 +1,45 @@
-const APP_STORE_URL = "https://apps.apple.com/us/app/laneloaf/id6761159321";
+const APP_STORE_BASE_URL = "https://apps.apple.com/us/app/laneloaf/id6761159321";
+const APP_URL = "https://laneloaf.1sec.plus/";
+
+function appStoreUrl(placement: string): string {
+  const url = new URL(APP_STORE_BASE_URL);
+  url.searchParams.set("pt", "127948210");
+  url.searchParams.set("ct", `laneloaf_site_${placement}`);
+  url.searchParams.set("mt", "8");
+  url.searchParams.set("utm_source", "laneloaf_site");
+  url.searchParams.set("utm_medium", "organic");
+  url.searchParams.set("utm_campaign", "landing_page");
+  url.searchParams.set("utm_content", placement);
+  return url.toString();
+}
 
 export default function HomePage() {
+  const headerCtaUrl = appStoreUrl("header");
+  const heroCtaUrl = appStoreUrl("hero");
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "LaneLoaf",
+    applicationCategory: "NavigationApplication",
+    operatingSystem: "iOS, macOS",
+    url: APP_URL,
+    downloadUrl: APP_STORE_BASE_URL,
+    description:
+      "Local-first dashcam viewer and GPX trip log app for replaying drives, inspecting telemetry, and exporting trip files.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <main className="page-shell">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <header className="site-header">
         <div className="brand-mark">
           <img src="/icon.png" className="brand-icon" alt="LaneLoaf Icon" />
@@ -12,7 +49,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="header-actions">
-          <a className="app-store-badge-sm" href={APP_STORE_URL} target="_blank" rel="noreferrer">
+          <a className="app-store-badge-sm" href={headerCtaUrl} target="_blank" rel="noreferrer">
             <img src="/assets/app-store-badge.svg" alt="Download on the App Store" />
           </a>
           <a className="link-secondary" href="/privacy.html">
@@ -25,12 +62,12 @@ export default function HomePage() {
         <div className="hero-content">
           <div className="hero-heading-kicker">Local-First Archive</div>
           <h1 className="hero-heading">
-            Your dashcam's best friend.
+            Turn Dashcam Footage Into Trip Logs
           </h1>
           <p className="hero-body">
-            Turn raw footage into a beautifully organized trip library. Replay drives, view telemetry, and export logs natively on Mac and iPhone.
+            Import MP4 dashcam clips and GPX routes, replay every drive on one map, inspect telemetry, and export GPX, images, or trip videos on Mac and iPhone.
           </p>
-          <a className="app-store-badge-lg" href={APP_STORE_URL} target="_blank" rel="noreferrer">
+          <a className="app-store-badge-lg" href={heroCtaUrl} target="_blank" rel="noreferrer">
             <img src="/assets/app-store-badge.svg" alt="Download on the App Store" />
           </a>
         </div>

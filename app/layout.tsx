@@ -2,9 +2,36 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "LaneLoaf – Dashcam trip library",
+  metadataBase: new URL("https://laneloaf.1sec.plus"),
+  title: "LaneLoaf: Dashcam Viewer & GPX Trip Log for Mac and iPhone",
   description:
-    "Turn dashcam footage and GPX routes into a browsable trip library with export-ready routes, GPX logs, and trip videos.",
+    "Local-first dashcam viewer for Mac and iPhone. Import MP4 footage and GPX files, replay drives on a map, inspect telemetry, and export trip logs.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://laneloaf.1sec.plus/",
+    siteName: "LaneLoaf",
+    title: "LaneLoaf: Dashcam Viewer & GPX Trip Log",
+    description:
+      "Import MP4 footage and GPX files, replay drives on one map, inspect telemetry, and export trip logs.",
+    images: [
+      {
+        url: "/icon.png",
+        width: 1024,
+        height: 1024,
+        alt: "LaneLoaf app icon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LaneLoaf: Dashcam Viewer & GPX Trip Log",
+    description:
+      "Local-first dashcam viewer for Mac and iPhone. Replay drives and export GPX trip logs.",
+    images: ["/icon.png"],
+  },
 };
 
 export default function RootLayout({
